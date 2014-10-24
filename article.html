@@ -1,0 +1,52 @@
+<div class="container-fluid" ng-controller="appController">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>來源：<a href="http://unlimited.kptaipei.tw/">柯P野生官網 </a></h1>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-4 col-md-12">
+            <single-select-list
+                    datasource="newGovDatas"
+                    list-orderby="orderby"
+                    do-edit="openContent"
+                    title='"柯P新政"'>
+
+                <item-template>
+                    <div>
+                        {{item.title}}
+
+                    </div>
+                </item-template>
+            </single-select-list>
+        </div>
+        <div class="col-sm-4 col-md-12">
+            <single-select-list
+                    datasource="realKP"
+                    list-orderby="orderby"
+                    do-edit="openContent"
+                    title='"真柯P"'>
+                <item-template>
+                    <div>
+                        {{item.title}}
+                    </div>
+                </item-template>
+            </single-select-list>
+        </div>
+        <div class="col-sm-4 col-md-12">
+            <single-select-list
+                    datasource="news"
+                    list-orderby="orderby"
+                    do-edit="openContent"
+                    title='"新聞稿"'>
+                <item-template>
+                    <div>
+                        {{item.title}}
+                    </div>
+                </item-template>
+            </single-select-list>
+        </div>
+    </div>
+</div>

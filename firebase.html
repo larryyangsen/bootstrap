@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html  ng-app="myApp">
+<head lang="en">
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js'></script>
+    <script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
+    <script src='https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js'></script>
+    <link rel="import" href="bower_components/paper-input/paper-input.html">
+    <script src="firebase.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        paper-input {
+            color: green;
+        }
+    </style>
+    <title></title>
+</head>
+<body ng-controller="myController">
+
+<div ng-repeat="data in fireDatas | orderBy : 'id'">
+        <input ng-model="data.id"   label="id" value="{{data.id}}">
+        <input ng-model="data.name" ng-keydown="save($event,data)"   label="name" value="{{data.name}}">
+</div>
+
+</body>
+</html>

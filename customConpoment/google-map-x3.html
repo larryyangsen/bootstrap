@@ -1,0 +1,46 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/google-map/google-map.html">
+
+<polymer-element name="google-map-x3" attributes="zoom latitude longitude">
+    <template>
+        <style>
+            google-map {
+                display: block;
+                height: 420px;
+                width:33%;
+                float:left;
+            }
+        </style>
+        <google-map id='m1' latitude="{{latitude}}" longitude="{{longitude}}"
+                    zoom="{{zoom}}" mapType="hybrid"></google-map>
+        <google-map id='m2' latitude="{{latitude}}" longitude="{{longitude}}"
+                    zoom="{{zoom}}"></google-map>
+        <google-map id='m3' latitude="{{latitude}}" longitude="{{longitude}}"
+                    zoom="{{zoom}}" mapType="satellite"></google-map>
+    </template>
+
+    <script>
+        (function(){
+            var init = 0;
+            Polymer('google-map-x3', {
+
+                ready: function() {
+                    var self = this;
+                    document.addEventListener('google-map-ready',function(e){
+                        self.hookEvent(self,'m'+ ++init);
+                    });
+                },
+
+                hookEvent:function(self,id){
+                    google.maps.event.addListener(self.$[id].map, 'center_changed', function() {
+                        self.latitude = self.$[id].map.getCenter().lat();
+                        self.longitude = self.$[id].map.getCenter().lng();
+                    });
+                    google.maps.event.addListener(self.$[id].map, 'zoom_changed', function() {
+                        self.zoom = self.$[id].map.getZoom();
+                    });
+                }
+            });
+        })();
+    </script>
+</polymer-element>
