@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-Hant">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/
+➥3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/
+➥1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="../../includes/bootstrap/css/bootstrap.css">
+    <script src="../../includes/jquery/jquery-2.1.1.min.js"></script>
+    <script src="../../includes/bootstrap/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+</head>
+<body>
+<div class="container-fluid">
+    <form class="form">
+        <div class="form-group">
+            <label for="nameField">Name</label>
+            <input class="form-control" id="nameField" type="text" placeholder="Your Name"/>
+        </div>
+        <div class="form-group">
+            <label for="emailField">Email</label>
+            <input class="form-control" id="emailField"
+                   type="email" placeholder="Your Email"/>
+        </div>
+        <div class="form-group">
+            <label for="phoneField">Phone</label>
+            <input class="form-control" id="phoneField"
+                   type="text" placeholder="Your Phone"/>
+        </div>
+        <div class="form-group">
+            <label for="descField">Email</label>
+            <textarea class="form-control" id="descField" placeholder="Your Comments" ></textarea>
+        </div>
+        <div class="col-xs-10 col-xs-offset-2">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-default">Reset</button>
+        </div>
+    </form>
+    <div class="clearfix"></div>
+    <hr>
+
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="nameField" class="col-xs-2">Name</label>
+
+            <div class="col-xs-10">
+                <input class="form-control" id="nameField" type="text" placeholder="Your Name"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="emailField2" class="col-xs-2">Email</label>
+
+            <div class="col-xs-10">
+                <input class="form-control" id="emailField2"
+                       type="email" placeholder="Your Email"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="phoneField2" class="col-xs-2">Phone</label>
+
+            <div class="col-xs-10">
+                <input class="form-control" id="phoneField2"
+                       type="text" placeholder="Your Phone"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="descField2" class="col-xs-2">Email</label>
+
+            <div class="col-xs-10">
+                <textarea class="form-control" id="descField2" placeholder="Your Comments"></textarea>
+            </div>
+        </div>
+        <div class="col-xs-10 col-xs-offset-2">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="reset" class="btn btn-default">Reset</button>
+        </div>
+    </form>
+    <div class="clearfix"></div>
+    <hr>
+
+    <div class="well well-sm">
+        <form class="form-inline">
+            <div class="form-group">
+                <input class="form-control" id="emailField3" type="email" placeholder="Enter email"/>
+            </div>
+            <div class="form-group"><input class="from-control" id="passwordField" type="password" placeholder="Password"/>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox">Remeber me</input></label>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
+    </div>
+    <input class="form-control" type="text" placeholder="Disabled input here" disabled/>
+
+    <div class="form-group has-success">
+        <label class="control-label" for="inputField">Iuput with success</label>
+        <input class="form-control" id="inputField" type="text"/>
+    </div>
+</div>
+</body>
+</html>
