@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-Hant">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/
+➥3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/
+➥1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="../../includes/bootstrap/css/bootstrap.css">
+    <script src="../../includes/jquery/jquery-2.1.1.min.js"></script>
+    <script src="../../includes/bootstrap/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+    <script>
+        var options={
+            animation :true;
+        }
+        $(document).ready(function(){
+            $('.tooltipButton').tooltip(options);
+        })
+    </script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Collapsible
+                    Group  Item #1</a></h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse ">
+                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Collapsible
+                    Group  Item #2</a></h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse ">
+                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn btn-default tooltipButton" data-toggle="tooltip" data-placement="bottom"
+            title="I am a Bootstrap button">Who am I?
+    </button>
+</div>
+</body>
+</html>

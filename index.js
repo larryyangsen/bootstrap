@@ -2,8 +2,11 @@
  * Created by Larry on 2014/10/20.
  */
 (function () {
-    angular.module('app', ['angulike','kpApi', 'ui.router', 'l8k.UI.DirectiveModule', 'ui.bootstrap'])
-        .controller('appController', ['$scope', 'newGov', '$modal', function ($scope, newGov, $modal) {
+    angular.module('app', ['angulike','kpApi', 'ui.router', 'l8k.UI.DirectiveModule', 'ui.bootstrap','restangular'])
+        .config(function(RestangularProvider){
+            RestangularProvider.setBaseUrl('http://192.168.20.61:9000/')
+        })
+        .controller('appController', ['$scope', 'newGov', '$modal','Restangular', function ($scope, newGov, $modal) {
             $scope.orderby = ["last_modifly"];
             $scope.newGovDatas = [];
             $scope.realKP = [];
@@ -63,6 +66,13 @@
 
             }
         }])
+        .controller('restController',function($scope,Restangular){
+          var recform = Restangular.one('recformList').get();
+            recform.then(function(form){
+               $scope.collection=form;
+            });
+
+        })
         .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
             $stateProvider
                 .state('article', {

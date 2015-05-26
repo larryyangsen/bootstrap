@@ -2,9 +2,10 @@
  * Created by Larry on 2014/10/20.
  */
 (function(){
-    angular.module('kpApi', [])
+    angular.module('kpApi', ['restangular'])
         .value('key', 'kp543692c841e3c3.35477699')
-        .service('newGov', function (key, $http, $q) {
+
+        .service('newGov', function (key, $http, $q ) {
             this.getKP = function (category,id) {
                 var deferred = $q.defer();
                 $http({
@@ -15,8 +16,10 @@
                 }).error(function (data, status, headers, config) {
                     deferred.reject(status);
                 });
+
                 return deferred.promise;
             }
+
 
         });
 })();

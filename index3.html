@@ -24,18 +24,23 @@
     <script src="includes/bootstrap/js/ui-bootstrap-tpls-0.11.2.min.js"></script>
     <script src="angulike.js"></script>
     <script src="service.js"></script>
-    <script src="index.js"></script>
+    <script src="index3.js"></script>
 
     <script src="directives/l8k.UIDirective.js"></script>
 
 
     <meta charset="UTF-8">
-    <title>柯P野生官網</title>
+    <title></title>
 
 
 </head>
 <body>
-<div class="col-lg-6 col-lg-offset-6" fb-like></div>
-<div class="container-fluid" ui-view>資料讀取中</div>
+<div ng-controller="restController" class="container-fluid">
+    <div class="row">
+        <div class="col-md-12" ng-repeat="item in collection">
+            {{item}}
+        </div>
+    </div>
+</div>
 </body>
 </html>
